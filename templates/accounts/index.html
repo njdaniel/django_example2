@@ -6,7 +6,7 @@
         {% for account in accounts %}
             <li>
                 <a href="{% url 'account_detail' account.id %}">
-                    {{ account.title|capfirst }}
+                    {{ account.username|capfirst }}
                 </a>
             </li>
         {% endfor %}

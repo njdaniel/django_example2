@@ -5,12 +5,12 @@ from accounts.models import Account
 # Create your views here.
 
 def index(request):
-    accounts = Account.objects.exclude(amount=0)
+    accounts = Account.objects.exclude(type='AS2')
     return render(request, 'accounts/index.html', {
         'accounts': accounts,
     })
 
-def item_detail(request, id):
+def account_detail(request, id):
     try:
         account = Account.objects.get(id=id)
     except Account.DoesNotExist:
