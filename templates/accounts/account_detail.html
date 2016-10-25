@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <a href="{% url 'index' %}">Back to item list</a>
+    <h3>{{ item.usernamr|capfirst }}</h3>
+    <h4>More Info:</h4>
+    <p> {{ item.type }}</p>
+    <p> {{ item.host }}</p>
+    <p> {{ item.server }}</p>
+
+{% endblock %}

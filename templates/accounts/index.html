@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h3>Accounts in Server</h3>
+    <ul>
+        {% for account in accounts %}
+            <li>
+                <a href="{% url 'account_detail' account.id %}">
+                    {{ account.title|capfirst }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
