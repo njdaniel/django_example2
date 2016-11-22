@@ -4,7 +4,12 @@ from django.db import models
 
 # Create your models here.
 class Account(models.Model):
-    username = models.CharField(max_length=2000)
+    alias = models.CharField(max_length=2000)
+    mailbox = models.CharField(max_length=2000)
     type = models.CharField(max_length=2000)
-    host = models.CharField(max_length=2000)
+    whitelist_ip = models.CharField(max_length=2000)
+    inbox = models.CharField(max_length=2000)
+    outbox = models.CharField(max_length=2000)
+    host_url = models.CharField(max_length=2000)
     server = models.CharField(max_length=2000)
+    customer = models.CharField(max_length=2000)

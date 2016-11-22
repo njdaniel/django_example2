@@ -2,10 +2,10 @@
 
 {% block content %}
     <a href="{% url 'index' %}">Back to item list</a>
-    <h3>{{ account.username|capfirst }}</h3>
+    <h3>{{ account.alias|capfirst }}</h3>
     <h4>More Info:</h4>
     <p> {{ account.type }}</p>
-    <p> {{ account.host }}</p>
+    <p> {{ account.host_url }}</p>
     <p> {{ account.server }}</p>
 
 {% endblock %}
