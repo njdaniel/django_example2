@@ -6,10 +6,10 @@ from accounts.models import Account
 
 def index(req):
     if req.GET:
-        search_term = req.GET['term']
-        results = Account.objects.filter(field__istartswith=search_term)
+        search_term = req.GET['S']
+        results = Account.objects.filter(alias__contains=search_term)
         return render_to_response('accounts/index.html', {'results': results})
-    return  render_to_response('accounts/index.html', {})
+    return render_to_response('accounts/index.html', {})
 
 # def index(request):
 #     accounts = Account.objects.exclude(type='AS2')

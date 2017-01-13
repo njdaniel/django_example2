@@ -9,7 +9,11 @@
         Found the following items:
             <ol>
                 {% for result in results %}
-                        <li>{{result}}</li>
+                        <li>
+                            <a href="{% url 'account_detail' result.id %}">
+                    {{ result.alias|capfirst }}
+                </a>
+                        </li>
                 {% endfor %}
             </ol>
     {% endif %}
