@@ -2,7 +2,7 @@ from django.shortcuts import render, render_to_response
 from django.http import Http404
 from django.http import HttpResponse
 from accounts.models import Account
-# Test comment
+
 
 def index(req):
     if req.GET:
