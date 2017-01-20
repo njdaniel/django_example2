@@ -7,7 +7,6 @@ from accounts.models import Account
 def index(req):
     if req.GET:
         search_term = req.GET['S']
-        # TODO: Remove dupes from being returned
         results = Account.objects.filter(alias__icontains=search_term), \
                   Account.objects.filter(mailbox__icontains=search_term), \
                   Account.objects.filter(type__icontains=search_term), \
