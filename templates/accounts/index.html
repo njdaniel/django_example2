@@ -9,11 +9,13 @@
         Found the following items:
             <ol>
                 {% for result in results %}
+                    {% for account in result %}
                         <li>
-                            <a href="{% url 'account_detail' result.id %}">
-                    {{ result.alias|capfirst }}
+                            <a href="{% url 'account_detail' account.id %}">
+                    {{ account.alias|capfirst }}
                 </a>
                         </li>
+                        {% endfor %}
                 {% endfor %}
             </ol>
     {% endif %}
