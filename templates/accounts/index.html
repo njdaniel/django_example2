@@ -3,7 +3,8 @@
 {% block content %}
     <h3>Accounts in Server</h3>
     <form>
-        <input name='S'>
+        <input name='S' placeholder="Search All Fields">
+        <input type="submit" value="Search">
     </form>
     {% if results %}
         Found the following items:
@@ -14,6 +15,11 @@
                         <a href="{% url 'account_detail' result.id %}">
                 {{ result.alias|capfirst }}
             </a>
+                            <ul id="details">
+                                <li><b>Mailbox:</b> {{ result.mailbox }}</li>
+                                <li><b>Transfer Protocol: </b>{{ result.type }}</li>
+                                <li><b>Server: </b>{{ result.server }}</li>
+                            </ul>
                     </li>
 
                 {% endfor %}

@@ -4,8 +4,13 @@
     <a href="{% url 'index' %}">Back to item list</a>
     <h3>{{ account.alias|capfirst }}</h3>
     <h4>More Info:</h4>
+    <p> Mailbox: {{ account.mailbox }}</p>
     <p> Transfer Protocol: {{ account.type }}</p>
+    <p> Whitelisted IP: {{ account.whitelist_ip }}</p>
+    <p> Inbox Path: {{ account.inbox }}</p>
+    <p> Outbox Path: {{ account.outbox }}</p>
     <p> Host URL: {{ account.host_url }}</p>
     <p> Server: {{ account.server }}</p>
+    <p> Customer: {{ account.customer }}</p>
 
 {% endblock %}
