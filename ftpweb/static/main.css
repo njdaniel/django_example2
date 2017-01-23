@@ -10,6 +10,10 @@ ul {
     list-style-type: none;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 .hovered {
     opacity: .6;
 }
