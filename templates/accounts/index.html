@@ -15,6 +15,11 @@
                         <a href="{% url 'account_detail' result.id %}">
                 {{ result.alias|capfirst }}
             </a>
+                            <ul id="details">
+                                <li>Mailbox: {{ result.mailbox }}</li>
+                                <li>Transfer Protocol: {{ result.type }}</li>
+                                <li>Server: {{ result.server }}</li>
+                            </ul>
                     </li>
 
                 {% endfor %}
