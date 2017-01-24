@@ -5,6 +5,9 @@ from accounts.models import Account
 
 
 def index(req):
+    """Renders homepage for searching Database
+
+    Searches each field currently in database, removing dupes."""
     if req.GET:
         search_term = req.GET['S']
         results = Account.objects.filter(alias__icontains=search_term), \
@@ -17,6 +20,7 @@ def index(req):
                   Account.objects.filter(server__icontains=search_term), \
                   Account.objects.filter(customer__icontains=search_term),
         unique = set()
+        # TODO: Add filter from the results
         for inquery in results:
             for account in inquery:
                 unique.add(account)
