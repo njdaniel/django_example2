@@ -21,6 +21,9 @@ def index(req):
                   Account.objects.filter(customer__icontains=search_term),
         unique = set()
         # TODO: Add filter from the results
+        # TODO: Add no results page
+        # TODO: Dropdown menu
+        # TODO: Case sensitvitiy option
         for inquery in results:
             for account in inquery:
                 unique.add(account)
@@ -34,6 +37,20 @@ def index(req):
 #     })
 
 def account_detail(request, id):
+    """Returns page of Account Details
+        Alias
+        Mailbox
+        Transfer Protocol
+        IPs whitelisted
+        Paths
+        URLS
+        Server
+        Customer
+
+    :param request:
+    :param id:
+    :return:
+    """
     try:
         account = Account.objects.get(id=id)
     except Account.DoesNotExist:
