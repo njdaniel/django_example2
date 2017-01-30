@@ -20,6 +20,7 @@ def index(req):
                   Account.objects.filter(server__icontains=search_term), \
                   Account.objects.filter(customer__icontains=search_term),
         unique = set()
+        # TODO: Sorting
         # TODO: Add filter from the results
         # TODO: Add no results page
         # TODO: Dropdown menu

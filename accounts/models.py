@@ -13,3 +13,7 @@ class Account(models.Model):
     host_url = models.CharField(max_length=2000)
     server = models.CharField(max_length=2000)
     customer = models.CharField(max_length=2000)
+
+# TODO: When account was created
+# TODO: Who created the account
+# TODO: Actions of accounts
