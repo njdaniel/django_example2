@@ -9,8 +9,13 @@ https://docs.djangoproject.com/en/1.10/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.10/ref/settings/
 """
+from __future__ import absolute_import, unicode_literals
 
 import os
+# import djcelery
+
+# Celery Settings
+CELERY_BROKER_URL = 'amqp://guest:guest@localhost//'
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -124,3 +129,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'ftpweb', 'static'),
 )
+
+# TODO: LOGGING to email me for HTTP 500 errors
