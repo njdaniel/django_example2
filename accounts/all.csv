@@ -1,4 +1,5 @@
 Alias,Mailbox,Type,Whitelisted IP Address,Inbox,Outbox,URL,Cleo Server,Customer
+supertest8, supertest8, FTP, 127.0.0.1, \root\nick\in, \root\nick\out, redtoad.com, DC, RedToad Corp
 supertest7, supertest7, FTP, 127.0.0.1, \root\nick\in, \root\nick\out, redtoad.com, DC, RedToad Corp
 supertest6, supertest6, FTP, 127.0.0.1, \root\nick\in, \root\nick\out, redtoad.com, DC, RedToad Corp
 supertest5, supertest5, FTP, 127.0.0.1, \root\nick\in, \root\nick\out, redtoad.com, DC, RedToad Corp
