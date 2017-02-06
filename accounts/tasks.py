@@ -1,3 +1,5 @@
+"""Functions used by celery to be run async can also be scheduled"""
+
 from __future__ import absolute_import, unicode_literals
 import csv
 from celery import shared_task
@@ -7,6 +9,8 @@ from accounts.models import Account
 @shared_task
 def import_csv():
     """Imports csv into the accounts.models for each Account
+
+    This function is be run on a schedule. During the
         """
     # print(listdir)
     path_to_csv =  './accounts/all.csv'

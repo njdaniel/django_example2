@@ -11,15 +11,13 @@ This is an introduction to the FTPWebApp Project
 Requirements:
    TDD
 
-How to Use:
-   For Mercurygate Employees:
-      Connect to MG's OpenVPN
-      Go to 10.66.35.37:800 (WARNING: Subject to change)
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
+   tutorial
+   project
+   code
 
 
 Indices and tables

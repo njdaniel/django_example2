@@ -1,3 +1,6 @@
+"""These render the HTML when User hits the url from urls.py.
+This is where you call the Database objects from models.py"""
+
 from django.shortcuts import render, render_to_response
 from django.http import Http404
 from django.http import HttpResponse

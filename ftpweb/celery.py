@@ -1,3 +1,12 @@
+""""Celery module for Automating
+Setting Up to use celery:
+    Using settings.py for the celery app settings,
+        using 'CELERY_'
+
+    Create instance of Celery, and discover tasks that automatically discovered in the
+        tasks.py (It's MAGIC!!)
+"""
+
 from __future__ import absolute_import, unicode_literals
 import os
 from celery import Celery
