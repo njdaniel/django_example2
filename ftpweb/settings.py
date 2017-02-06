@@ -20,6 +20,7 @@ CELERY_ACCEPT_CONTENT = ['json']
 CELERY_RESULT_BACKEND = 'db+sqlite:///results.sqlite'
 CELERY_TASK_SERIALIZER = 'json'
 
+# Celery Beat Scheduler
 CELERY_BEAT_SCHEDULE = {
     'import_csv': {
     'task': 'accounts.tasks.import_csv',
